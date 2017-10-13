@@ -81,26 +81,42 @@ $(document).ready(function () {
     // $('#output1').text(newGalactic.age);
     newGalactic.convertSeconds();
     if (planet === "Earth") {
-      $('#output1').text(newGalactic.age);
-      $('#output2').text(newGalactic.ageInSeconds);
-      $('#output3').text(newGalactic.birthday);
-      $('#resultEarth').toggle();
+      $('#output1earth').text(newGalactic.age);
+      $('#output2earth').text(newGalactic.ageInSeconds);
+      $('#output3earth').text(newGalactic.birthday);
+      $('#resultEarth').show();
+      $('#resultMercury').hide();
+      $('#resultVenus').hide();
+      $('#resultMars').hide();
+      $('#resultJupiter').hide();
     } else if (planet === "Mercury") {
-      $('#output1').text(newGalactic.mercuryAge());
-      $('#output3').text(newGalactic.birthday);
-      $('#resultMercury').toggle();
+      $('#output1merc').text(newGalactic.mercuryAge());
+      $('#output3merc').text(newGalactic.birthday);
+      $('#resultMercury').show();
+      $('#resultVenus').hide();
+      $('#resultMars').hide();
+      $('#resultJupiter').hide();
     } else if (planet === "Venus") {
-      $('#output1').text(newGalactic.venusAge());
-      $('#output3').text(newGalactic.birthday);
-      $('#resultVenus').toggle();
+      $('#output1ven').text(newGalactic.venusAge());
+      $('#output3ven').text(newGalactic.birthday);
+      $('#resultVenus').show();
+      $('#resultMercury').hide();
+      $('#resultMars').hide();
+      $('#resultJupiter').hide();
     } else if (planet === "Mars") {
-      $('#output1').text(newGalactic.marsAge());
-      $('#output3').text(newGalactic.birthday);
-      $('#resultMars').toggle();
+      $('#output1mars').text(newGalactic.marsAge());
+      $('#output3mars').text(newGalactic.birthday);
+      $('#resultMars').show();
+      $('#resultMercury').hide();
+      $('#resultVenus').hide();
+      $('#resultJupiter').hide();
     } else if (planet === "Jupiter") {
-      $('#output1').text(newGalactic.jupiterAge());
-      $('#output3').text(newGalactic.birthday);
-      $('#resultJupiter').toggle();
+      $('#output1jup').text(newGalactic.jupiterAge());
+      $('#output3jup').text(newGalactic.birthday);
+      $('#resultJupiter').show();
+      $('#resultMercury').hide();
+      $('#resultVenus').hide();
+      $('#resultMars').hide();
     }
   });
 });
