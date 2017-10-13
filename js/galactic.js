@@ -6,7 +6,7 @@ export class Galactic{
   }
 
   determineAge (currentTime) {
-
+    moment().subtract(51)
   }
 
   convertSeconds () {
@@ -15,19 +15,23 @@ export class Galactic{
   }
 
   mercuryAge () {
-    let age = this.age * 0.24;
+    let age = parseFloat((this.age / 0.24).toFixed(1));
+    return age;
   }
 
   venusAge () {
-    let age = this.age * 0.62;
+    let age = parseFloat((this.age / 0.62).toFixed(1));
+    return age;
   }
 
   marsAge () {
-    let age = this.age * 1.88;
+    let age = parseFloat((this.age / 1.88).toFixed(1));
+    return age;
   }
 
   jupiterAge () {
-    let age = this.age * 11.86;
+    let age = parseFloat((this.age / 11.86).toFixed(1));
+    return age;
   }
 
   lifeExpectancy () {
