@@ -5,8 +5,8 @@ export class Galactic{
     this.birthday = birthday;
   }
 
-  determineAge (currentTime) {
-    moment().subtract(51)
+  determineAge () {
+    return moment(this.birthday, "YYYY-MM-DD").fromNow();
   }
 
   convertSeconds () {

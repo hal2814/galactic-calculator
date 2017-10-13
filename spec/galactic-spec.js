@@ -6,8 +6,8 @@ describe('Galactic', function() {
   beforeEach(function() {
     myAge = new Galactic(51,1965-10-22);
   });
-  it('determines age based on moment()', function() {
-    expect(myAge.convertSeconds()).toEqual(1608540000);
+  it('determines age based on birthdate', function() {
+    expect(myAge.determineAge()).toEqual("51 years ago");
   });
 
   it('converts age in years into age in seconds', function() {

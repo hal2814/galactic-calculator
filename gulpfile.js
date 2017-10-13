@@ -7,6 +7,7 @@ var source = require('vinyl-source-stream');
 var uglify = require('gulp-uglify');
 var jshint = require('gulp-jshint');
 var babelify = require("babelify");
+var moment = require('moment');
 var buildProduction = utilities.env.production;
 
 var lib = require('bower-files')({
