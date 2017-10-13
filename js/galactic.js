@@ -5,11 +5,6 @@ export class Galactic{
     this.birthday = birthday;
     //.replace(/-|\s/g,"") to remove dashes
   }
-
-  determineAge () {
-    return moment(this.birthday, "YYYYMMDD").fromNow();
-  }
-
   convertSeconds () {
     this.ageInSeconds = this.age * 31540000;
     return this.ageInSeconds;

@@ -4,12 +4,8 @@ describe('Galactic', function() {
   let myAge;
 
   beforeEach(function() {
-    myAge = new Galactic(51,1965-10-22);
+    myAge = new Galactic(51,"1965-10-22");
   });
-  it('determines age based on birthdate', function() {
-    expect(myAge.determineAge()).toEqual("51 years ago");
-  });
-
   it('converts age in years into age in seconds', function() {
     expect(myAge.convertSeconds()).toEqual(1608540000);
   });
