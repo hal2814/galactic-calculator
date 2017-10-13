@@ -96,6 +96,7 @@ $(document).ready(function () {
       $('#resultVenus').hide();
       $('#resultMars').hide();
       $('#resultJupiter').hide();
+      $('#resultEarth').hide();
     } else if (planet === "Venus") {
       $('#output1ven').text(newGalactic.venusAge());
       $('#output3ven').text(newGalactic.birthday);
@@ -103,6 +104,7 @@ $(document).ready(function () {
       $('#resultMercury').hide();
       $('#resultMars').hide();
       $('#resultJupiter').hide();
+      $('#resultEarth').hide();
     } else if (planet === "Mars") {
       $('#output1mars').text(newGalactic.marsAge());
       $('#output3mars').text(newGalactic.birthday);
@@ -110,6 +112,7 @@ $(document).ready(function () {
       $('#resultMercury').hide();
       $('#resultVenus').hide();
       $('#resultJupiter').hide();
+      $('#resultEarth').hide();
     } else if (planet === "Jupiter") {
       $('#output1jup').text(newGalactic.jupiterAge());
       $('#output3jup').text(newGalactic.birthday);
@@ -117,6 +120,7 @@ $(document).ready(function () {
       $('#resultMercury').hide();
       $('#resultVenus').hide();
       $('#resultMars').hide();
+      $('#resultEarth').hide();
     }
   });
 });

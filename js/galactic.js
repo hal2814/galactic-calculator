@@ -30,7 +30,27 @@ export class Galactic{
     return age;
   }
 
-  lifeExpectancy () {
+  lifeExpectancy (cont, smoke) {
+    if (cont === "North America"){
 
+    }
+    else if (cont === "North America"){
+
+    }
+    else if (cont === "South America"){
+
+    }
+    else if (cont === "Europe"){
+
+    }
+    else if (cont === "Asia"){
+
+    }
+    else if (cont === "Africa"){
+
+    }
+    else if (cont === "Australia"){
+
+    }
   }
 }
