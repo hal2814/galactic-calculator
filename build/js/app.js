@@ -15,13 +15,13 @@ var Galactic = exports.Galactic = function () {
 
     this.age = age;
     this.ageInSeconds = 0;
-    this.birthday = birthday;
+    this.birthday = birthday.replace(/-|\s/g, "");
   }
 
   _createClass(Galactic, [{
     key: "determineAge",
     value: function determineAge() {
-      return moment(this.birthday, "YYYY-MM-DD").fromNow();
+      return moment(this.birthday, "YYYYMMDD").fromNow();
     }
   }, {
     key: "convertSeconds",
@@ -69,12 +69,20 @@ var _galactic = require('./../js/galactic.js');
 $(document).ready(function () {
   $('#galactic-form').submit(function (event) {
     event.preventDefault();
-    var age = $('#age').val();
+    // let age = $('#age').val();
+    var mo = moment("${this.birthday}", "YYYYMMDD").fromNow();
+    var age = parseInt(mo[0] + mo[1]);
+    console.log("age: " + age);
     var birthday = $('#birthday').val();
     var newGalactic = new _galactic.Galactic(age, birthday);
-    $('#output1').text(newGalactic.age);
+    // $('#output1').text(newGalactic.age);
+    $('#output1').text(mo);
     $('#output2').text(newGalactic.birthday);
   });
+});
+
+$(document).ready(function () {
+  $('#time').text(moment("20111031", "YYYYMMDD").fromNow());
 });
 
 },{"./../js/galactic.js":1}]},{},[2]);
