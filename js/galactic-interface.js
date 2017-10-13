@@ -8,10 +8,13 @@ $(document).ready(function() {
     let mo = moment(birthday, "YYYY-MM-DD").fromNow();
     let age = parseInt(mo[0]+mo[1]);
     let planet = $('#selectplanet').val();
+    let cont = $('#selectContinent').val();
+    let smoke = $('#smoke').val();
     console.log("age: "+ age + " ,type: "+ typeof age);
     console.log("birthday: "+ birthday + " ,type: "+typeof birthday);
 
     let newGalactic = new Galactic(age,birthday);
+    newGalactic.lifeExpectancy(cont,smoke);
     console.log("this.age: "+ newGalactic.age + " ,type: "+ typeof newGalactic.age);
     console.log("newGalactic.birthday: "+ newGalactic.birthday + " ,type: "+typeof newGalactic.birthday);
     // $('#output1').text(newGalactic.age);
@@ -20,6 +23,7 @@ $(document).ready(function() {
       $('#output1earth').text(newGalactic.age);
       $('#output2earth').text(newGalactic.ageInSeconds);
       $('#output3earth').text(newGalactic.birthday);
+      $('#output4earth').text(newGalactic.life);
       $('#resultEarth').show();
       $('#resultMercury').hide();
       $('#resultVenus').hide();
@@ -29,6 +33,7 @@ $(document).ready(function() {
     else if(planet === "Mercury"){
       $('#output1merc').text(newGalactic.mercuryAge());
       $('#output3merc').text(newGalactic.birthday);
+      $('#output4merc').text(newGalactic.life);
       $('#resultMercury').show();
       $('#resultVenus').hide();
       $('#resultMars').hide();

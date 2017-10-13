@@ -3,6 +3,7 @@ export class Galactic{
     this.age = age;
     this.ageInSeconds = 0;
     this.birthday = birthday;
+    this.life = 0;
     //.replace(/-|\s/g,"") to remove dashes
   }
   convertSeconds () {
@@ -53,5 +54,7 @@ export class Galactic{
     if(smoke === "Yes"){
       age -= 10;
     }
+    this.life = age;
+    return age;
   }
 }
