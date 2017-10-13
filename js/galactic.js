@@ -2,7 +2,8 @@ export class Galactic{
   constructor(age,birthday){
     this.age = age;
     this.ageInSeconds = 0;
-    this.birthday = birthday.replace(/-|\s/g,"");
+    this.birthday = birthday;
+    //.replace(/-|\s/g,"") to remove dashes
   }
 
   determineAge () {

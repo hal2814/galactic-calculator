@@ -15,7 +15,8 @@ var Galactic = exports.Galactic = function () {
 
     this.age = age;
     this.ageInSeconds = 0;
-    this.birthday = birthday.replace(/-|\s/g, "");
+    this.birthday = birthday;
+    //.replace(/-|\s/g,"") to remove dashes
   }
 
   _createClass(Galactic, [{
@@ -64,25 +65,28 @@ var Galactic = exports.Galactic = function () {
 },{}],2:[function(require,module,exports){
 'use strict';
 
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 var _galactic = require('./../js/galactic.js');
 
 $(document).ready(function () {
   $('#galactic-form').submit(function (event) {
     event.preventDefault();
     // let age = $('#age').val();
-    var mo = moment("${this.birthday}", "YYYYMMDD").fromNow();
+    var birthday = $('#birthday').val();
+    var mo = moment(birthday, "YYYY-MM-DD").fromNow();
     var age = parseInt(mo[0] + mo[1]);
     console.log("age: " + age);
-    var birthday = $('#birthday').val();
+    console.log("birthday: " + birthday + " ,type: " + (typeof birthday === 'undefined' ? 'undefined' : _typeof(birthday)));
     var newGalactic = new _galactic.Galactic(age, birthday);
     // $('#output1').text(newGalactic.age);
-    $('#output1').text(mo);
+    $('#output1').text(age);
     $('#output2').text(newGalactic.birthday);
   });
 });
 
 $(document).ready(function () {
-  $('#time').text(moment("20111031", "YYYYMMDD").fromNow());
+  $('#time').text(moment("2011-10-31", "YYYY-MM-DD").fromNow());
 });
 
 },{"./../js/galactic.js":1}]},{},[2]);
