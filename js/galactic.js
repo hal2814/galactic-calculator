@@ -31,26 +31,27 @@ export class Galactic{
   }
 
   lifeExpectancy (cont, smoke) {
+    let age = 0;
     if (cont === "North America"){
-
-    }
-    else if (cont === "North America"){
-
+      age = 81;
     }
     else if (cont === "South America"){
-
+      age = 79;
     }
     else if (cont === "Europe"){
-
+      age = 81;
     }
     else if (cont === "Asia"){
-
+      age = 74;
     }
     else if (cont === "Africa"){
-
+      age = 64;
     }
-    else if (cont === "Australia"){
-
+    else if (cont === "Oceania"){
+      age = 79;
+    }
+    if(smoke === "Yes"){
+      age -= 10;
     }
   }
 }
