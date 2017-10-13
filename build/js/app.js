@@ -20,11 +20,6 @@ var Galactic = exports.Galactic = function () {
   }
 
   _createClass(Galactic, [{
-    key: "determineAge",
-    value: function determineAge() {
-      return moment(this.birthday, "YYYYMMDD").fromNow();
-    }
-  }, {
     key: "convertSeconds",
     value: function convertSeconds() {
       this.ageInSeconds = this.age * 31540000;
@@ -76,12 +71,18 @@ $(document).ready(function () {
     var birthday = $('#birthday').val();
     var mo = moment(birthday, "YYYY-MM-DD").fromNow();
     var age = parseInt(mo[0] + mo[1]);
-    console.log("age: " + age);
+    console.log("age: " + age + " ,type: " + (typeof age === 'undefined' ? 'undefined' : _typeof(age)));
     console.log("birthday: " + birthday + " ,type: " + (typeof birthday === 'undefined' ? 'undefined' : _typeof(birthday)));
+
     var newGalactic = new _galactic.Galactic(age, birthday);
+    console.log("this.age: " + newGalactic.age + " ,type: " + _typeof(newGalactic.age));
+    console.log("newGalactic.birthday: " + newGalactic.birthday + " ,type: " + _typeof(newGalactic.birthday));
     // $('#output1').text(newGalactic.age);
-    $('#output1').text(age);
-    $('#output2').text(newGalactic.birthday);
+    newGalactic.convertSeconds();
+    $('#output1').text(newGalactic.age);
+    $('#output2').text(newGalactic.ageInSeconds);
+    $('#output3').text(newGalactic.birthday);
+    $('#result').show();
   });
 });
 

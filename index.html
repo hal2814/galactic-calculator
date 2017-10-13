@@ -23,19 +23,32 @@
                 <label for="birthday">Enter your birthday:</label>
                 <input id="birthday" type="date" class="form-control">
                 <br>
-                <button class="btn btn-success" type="submit">Submit</button>
-              </form>
-            </div>
+
+
+               <select class="form-control" id="selectplanet">
+                 <option>Select Planet</option>
+                 <option>Earth</option>
+                 <option>Mercury</option>
+                 <option>Venus</option>
+                 <option>Mars</option>
+                 <option>Jupiter</option>
+               </select>
+               <button class="btn btn-success" type="submit">Submit</button>
+              </div>
+            </form>
           </div>
         </div>
         <div class="col-6">
-          <div class="card card-inverse" style="background-color: #333; border-color: #333;">
+          <div id="result" class="card card-inverse output" style="background-color: #333; border-color: #333;">
             <div class="card-body text-white">
             <div class="card-body text-white">
-            <h3>Your Earth Age: </h3>
-            <h1 class="card-text"><span id="output1"></span></h1>
+            <h3>Earth Age: </h3>
+            <h1 class="card-text"><span id="output1"></span> Years</h1>
+            <br>
+            <h3>Earth Age in Seconds: </h3>
+            <h1 class="card-text"><span id="output2"></span> Seconds</h1>
+            <br>
             <h3>Birthday: </h3>
-            <h1 class="card-text"><span id="output2"></span></h1>
             <h1 class="card-text"><span id="output3"></span></h1>
             </div>
          </div>
