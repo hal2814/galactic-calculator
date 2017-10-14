@@ -11,24 +11,24 @@ export class Galactic{
     return this.ageInSeconds;
   }
 
-  mercuryAge () {
-    let age = parseFloat((this.age / 0.24).toFixed(1));
-    return age;
+  mercuryAge (age) {
+    let planetAge = parseFloat((age / 0.24).toFixed(1));
+    return planetAge;
   }
 
-  venusAge () {
-    let age = parseFloat((this.age / 0.62).toFixed(1));
-    return age;
+  venusAge (age) {
+    let planetAge = parseFloat((age / 0.62).toFixed(1));
+    return planetAge;
   }
 
-  marsAge () {
-    let age = parseFloat((this.age / 1.88).toFixed(1));
-    return age;
+  marsAge (age) {
+    let planetAge = parseFloat((age / 1.88).toFixed(1));
+    return planetAge;
   }
 
-  jupiterAge () {
-    let age = parseFloat((this.age / 11.86).toFixed(1));
-    return age;
+  jupiterAge (age) {
+    let planetAge = parseFloat((age / 11.86).toFixed(1));
+    return planetAge;
   }
 
   lifeExpectancy (cont, smoke) {
