@@ -54,6 +54,7 @@ var Galactic = exports.Galactic = function () {
     key: "lifeExpectancy",
     value: function lifeExpectancy(cont, smoke) {
       var age = 0;
+
       if (cont === "North America") {
         age = 81;
       } else if (cont === "South America") {
@@ -66,6 +67,9 @@ var Galactic = exports.Galactic = function () {
         age = 64;
       } else if (cont === "Oceania") {
         age = 79;
+      }
+      if (this.age >= 81) {
+        age = this.age + 20;
       }
       if (smoke === "Yes") {
         age -= 10;

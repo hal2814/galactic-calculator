@@ -33,6 +33,7 @@ export class Galactic{
 
   lifeExpectancy (cont, smoke) {
     let age = 0;
+
     if (cont === "North America"){
       age = 81;
     }
@@ -50,6 +51,9 @@ export class Galactic{
     }
     else if (cont === "Oceania"){
       age = 79;
+    }
+    if(this.age >= 81){
+      age = this.age + 20;
     }
     if(smoke === "Yes"){
       age -= 10;
