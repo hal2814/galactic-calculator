@@ -23,6 +23,12 @@ open index.html
 ```
 This should open the application in your browser and you can figure out your age on other planets!
 
+Future Features:
+-------------
+-More life expectancy variables
+-More planets, and/or moons
+-The age Keith Richards will be in dog years on the planet Jupiter in 2073. 
+
 
 
 ![alt text](/img/screen.png)
