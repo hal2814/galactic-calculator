@@ -7,3 +7,8 @@ body {
 .output {
   display: none;
 }
+
+
+img.plan {
+  width: 50%;
+}
